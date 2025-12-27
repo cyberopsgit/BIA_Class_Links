@@ -35,6 +35,9 @@ Create a New VM in UTM:
     Configure hardware settings. 1024 MB of memory is sufficient.
     Proceed through the steps until the "Summary" screen. Before saving, check the box to Open VM Settings.
 
+
+https://www.sans.org/blog/sans-pen-test-cheat-sheet-nmap-v1-1 - nmap cheatsheet.
+
 Configure VM Settings:
 
     In the settings window, go to the Drivers section. Find the default IDE Drive and delete it.
