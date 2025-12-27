@@ -18,3 +18,28 @@ https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
 VMware Workstation Installation - https://www.youtube.com/watch?v=1w6CH6eTZhM
 
 https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/sampconf.pdf
+
+
+Metasploitable 2 - MACos
+1. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. brew install qemu
+
+3. qemu-img convert -O qcow2 Metasploitable.vmdk Metasploitable.qcow2
+
+Create a New VM in UTM:
+
+    Open the UTM application and click the + icon to create a new virtual machine.
+    Select Emulate.
+    Select Other as the operating system and on the next screen, select None for the boot ISO image.
+    Configure hardware settings. 1024 MB of memory is sufficient.
+    Proceed through the steps until the "Summary" screen. Before saving, check the box to Open VM Settings.
+
+Configure VM Settings:
+
+    In the settings window, go to the Drivers section. Find the default IDE Drive and delete it.
+    Click New Drive and select Import.
+    Choose the Metasploitable.qcow2 file you created earlier.
+    In the QEMU section (under the "System" tab), uncheck the UEFI Boot option.
+    In the Network section, ensure the mode is set to Shared Network so your host machine (Mac) and other VMs (like Kali Linux) can interact with it.
+    Click Save.
