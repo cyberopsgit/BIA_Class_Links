@@ -48,3 +48,7 @@ Configure VM Settings:
     In the QEMU section (under the "System" tab), uncheck the UEFI Boot option.
     In the Network section, ensure the mode is set to Shared Network so your host machine (Mac) and other VMs (like Kali Linux) can interact with it.
     Click Save.
+
+
+
+https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
